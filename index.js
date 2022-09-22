@@ -1,0 +1,1 @@
+gsap.to('h1', { duration: 3, stagger: 1, x: 400, color: 'white', rotation: 360 })
