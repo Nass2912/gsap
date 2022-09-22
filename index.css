@@ -12,3 +12,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
 }
+
+img {
+  margin: 10px;
+}
