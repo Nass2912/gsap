@@ -1,18 +1,30 @@
 body {
-  background-color: #9b2242;
+  font-family: "Kanit", sans-serif;
+  background: #252525;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+#demo {
+  height: 100vh;
+  border: 1px solid #333;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/space-background.png);
+  background-size: cover;
+  background-position: bottom;
 }
 
-h1 {
-  width: 50px;
-  height: 50px;
+#freds {
+  position: absolute;
+  top: 86vh;
+  left: 22vw;
 }
 
-.center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#freds img {
+  width: 122px;
 }
 
-img {
-  margin: 10px;
+.para {
+  height: 100vh;
+  color: white;
+  opacity: 0;
 }
