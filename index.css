@@ -19,12 +19,32 @@ body {
   left: 22vw;
 }
 
+@media(max-width: 500px) {
+  #freds {
+    top: 60vh;
+  }
+  #freds img {
+    width: 80px;
+  }
+}
+
 #freds img {
   width: 122px;
 }
 
 .para {
-  height: 100vh;
-  color: white;
-  opacity: 0;
+  color: blue;
+  font-size: 20px;
+  padding-bottom: 5rem;
+}
+
+.nopara {
+  font-size: 20px;
+  color: red;
+}
+
+.box {
+  background-color: white;
+  width: 10vw;
+  height: 10vw;
 }

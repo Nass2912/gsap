@@ -1,16 +1,11 @@
 // SETTING DEFAULTS
-gsap.defaults({ duration: 1 })
+let h = window.innerHeight;
+gsap.defaults({ duration: 0.8 })
 
 let t1= gsap.timeline();
 
-//USING STAGGER AND DURATION
-// gsap.to('h1', { stagger: 1, x: 400, color: 'white', rotation: 360 }).to(".fred", { x: 700, rotation: 360, ease: "bounce" }).to(".pink", { x: 700, rotation: 360, repeat: -1, yoyo: true, ease: "linear" });
-
 t1.to("#freds img", {
-    repeat: 1, yoyo: true, ease: "linear", y: -100
-})
-t1.to("#bill img", {
-    repeat:1, yoyo:true, ease:"linear", x:100
+    repeat: -1, yoyo: true, ease: "linear", y: `-${h/2}`, stagger: 0.3
 })
 
 gsap.to('.para', {
@@ -18,12 +13,29 @@ gsap.to('.para', {
         trigger: ".para",
         markers: true,
         scrub: 1,
+        start: `top ${h}`,
     },
-    opacity:1,
     duration:5,
-    color:"red"
+    color:"red",
 })
 
-document.addEventListener("scroll", () => {
-    t1.reverse();
+gsap.to(".nopara", {
+    scrollTrigger: {
+        trigger: ".nopara",
+        markers: true,
+        scrub: 1,
+        pin: true
+    },
+    color: 'blue',
+    duration: 5
 })
+
+const t2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".box",
+      markers: true,
+    }
+  });
+  t2.to(".box", {yPercent: 350, duration: 3})
+  t2.to(".box", {rotation: 360, duration: 3})
+  t2.to(".box", {xPercent: 350, duration: 2})
